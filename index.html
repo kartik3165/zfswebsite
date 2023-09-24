@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeal Fashion Club</title>
-    <!--<link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
 body {
@@ -14,349 +14,23 @@ body {
     background-color: #F8F8F8; /* Light gray background */
     color: #333; /* Dark text color */
 }
-  /* Base styles */
-  header {
-    background-color: #FF5A5F;
-    color: #fff;
-    padding: 10px 0;
-    position: relative;
-    height: 90px;
-}
-
-.logo-left, .logo-right {
-    position: absolute;
-    top: 5px;
-}
-
-.logo-left {
-    left: 5px;
-}
-
-.logo-right {
-    right: 5px;
-}
-
-.logo-left img, .logo-right img {
-    width: 50px; /* Fixed width */
-    height: 50px; /* Fixed height to maintain 1:1 ratio */
-}
-
-h1 {
-    margin: 0;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    font-size: 40px;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* Brand logo styles */
-.brand-logo {
-    width: 100px; /* Adjust the logo width as needed */
-    height: 100px;
-    border: 4px solid #FFD166; /* Vibrant yellow border */
-    border-radius: 50%;
-    margin-top: 10px;
-    animation: slideFromLeft 1s ease; /* Slide from left animation */
-}
-/* Main content styles */
-.content {
-    background-color: #EFEFEF; /* Light gray background color */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    animation: slideFromRight 1s ease; /* Slide from right animation */
-}
-.content h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-/* Call to action button styles */
-.cta-button {
-    background-color: #FF5A5F; /* Vibrant CTA button background color */
-    color: #fff;
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.3s ease; /* Smooth button color transition */
-    animation: slideFromRight 1s ease; /* Slide from right animation */
-}
-.cta-button:hover {
-    background-color: #E5484C; /* Darker color on hover */
-    animation: popup 0.3s ease;
-}
-/* Button popup animation */
-@keyframes popup {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-/* Slideshow container styles */
-.slideshow-container {
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    animation: slideFromLeft 1s ease; /* Slide from left animation */
-}
-/* Slides styles */
-.mySlides {
-    display: none;
-    animation: fadeIn 2s ease; /* Fade-in animation for images */
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.mySlides img {
-    width: 100%;
-    border-radius: 10px; /* Add rounded corners to images */
-}
-/* Event information paragraph styles */
-.event-info {
-    font-size: 18px;
-    margin-top: 10px;
-}
-/* YouTube video container styles */
-.video-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
-    overflow: hidden;
-    animation: slideFromLeft 1s ease; /* Slide from left animation */
-}
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* Scroll-triggered animation */
-.scroll-animation {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-/* Heading for Trophy Wins Till Now */
-.trophy-heading {
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #000;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    animation: slideFromLeft 1s ease; /* Slide from left animation */
-}
-/* Image and Text Section Styles */
-.image-text-section {
-    background-color: #EFEFEF; /* Light gray background color */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    margin-top: 20px; /* Create space from the content above */
-    animation: slideFromRight 1s ease; /* Slide from right animation */
-}
-.image-text-section h3 {
-    color: #333; /* Dark text color */
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.image-text-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* Prevent wrapping of items */
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    padding: 20px 0;
-    animation: slideFromLeft 1s ease; /* Slide from left animation */
-}
-.image-text-item {
-    text-align: center;
-    margin-right: 20px; /* Space between items */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s, transform 1s;
-}
-.image-text-item img {
-    width: 100px; /* Adjust image width as needed */
-    border-radius: 10px;
-}
-/* Fade-in animation on scroll */
-.image-text-item.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Keyframes for animations */
-@keyframes slideFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-@keyframes slideFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-/* Add this CSS for the costume slideshow */
-.costume-slideshow-container {
-    max-width: 600px;
-    margin: 20px auto;
-    position: relative;
-    animation: slideFromRight 1s ease; /* Slide from right animation */
-}
-.costume-slide {
-    display: none;
-}
-.costume-slide img {
-    width: 100%;
-    border-radius: 10px; /* Add rounded corners to images */
-}
-/* Add this CSS for styling the costume controls buttons */
-.costume-controls button {
-    background-color: #FF5A5F; /* Vibrant button background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px; /* Add spacing between buttons */
-}
-.costume-controls button:hover {
-    background-color: #E5484C; /* Darker color on hover */
-}
-footer {
-    background-color: #333; /* Dark background color for the footer */
-    color: #fff; /* Text color */
-    padding: 20px 0;
-    text-align: center;
-}
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.developer-info p {
-    margin: 0;
-    font-size: 16px;
-}
-.social-media-links {
-    margin-top: 10px;
-}
-.social-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-}
-.social-link:hover {
-    text-decoration: underline;
-}
-/* Add styles for the new section */
-.background-section {
-    background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEju5W_crSRWzwakwEjvo2DYQwWc5P3No6nZ7lytHvt9NYywv_AijHgJwxKYjRbVrzhXJX0Vv2Gho5XJLlQWMcoVQss9t8Ub9O5UVkjB0F3cmWomU8luWSylL0zqRmMfHpgJt6xG6EkoVLiGQ5tgufHQyIKuHeE4TK5HSGOmHAGEtIPIFInV8jhpLq1Xx9wr'); /* Replace 'your-background-image.jpg' with the actual image file path */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 100px 0; /* Adjust as needed */
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-/* Add styles for the centered button */
-.centered-button {
-    display: flex;
-    justify-content: center;
-}
-
-/* Add styles for the button animation (you can customize the animation as needed) */
-.animated-button {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    animation: pulse 2s infinite; /* Example animation, you can customize this */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.image-slideshow-container {
-    max-width: 600px;
-    margin: 20px auto;
-    position: relative;
-    animation: slideFromRight 1s ease;
-}
-
-.image-slide {
-    display: none;
-}
-
-.image-slide img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.image-control {
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-}
-
 </style>
 </head>
 <body>
     <!-- Header section with only brand name and logo -->
     <header>
-        <div class="logo-left">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs7cu3bt-8lFMVllSeFI8CnsGQ3zk-VDMYcfdgixO32c8p9rLZ_h2pVfP6phvw0lt2QKsSYk-34igenJksugSppRvyAoqG5cWh5JoQ9n5UpeZDmtYbbZTQ6oEkaqeqawI7QFXFqY6ilIfUWskmsvjCYraq266cK9jGkQy3iSLaVfk5Y-iuhxEbMEh2-7cH/s1765/1695390101918.png" alt="Left Logo">
-        </div>
-        <h1>Zeal Fashion Club</h1>
-        <div class="logo-right">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHr_1FcekXEKAjr6DvR0J7R8T5brq_dg227_90D37ATqg77O8Pdr5u-iag5YDuhEuMdq1jVvIZZMPDUhYWo13f00GxSHMKiiaOwowhyNMuSaGxGH2Ms3TiwnPgrOzdNNka6eaHlJNF4IPUudYrNEthUqD1OHfIuabOdlNH3hbNhrskYJmEbzyFUxTJrMXU/s244/1695390036149.png" alt="Right Logo">
+        <div class="logo-container">
+            <div class="logo-left">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs7cu3bt-8lFMVllSeFI8CnsGQ3zk-VDMYcfdgixO32c8p9rLZ_h2pVfP6phvw0lt2QKsSYk-34igenJksugSppRvyAoqG5cWh5JoQ9n5UpeZDmtYbbZTQ6oEkaqeqawI7QFXFqY6ilIfUWskmsvjCYraq266cK9jGkQy3iSLaVfk5Y-iuhxEbMEh2-7cH/s1765/1695390101918.png" alt="Left Logo">
+            </div>
+            <h1>Zeal Fashion Club</h1>
+            <div class="logo-right">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHr_1FcekXEKAjr6DvR0J7R8T5brq_dg227_90D37ATqg77O8Pdr5u-iag5YDuhEuMdq1jVvIZZMPDUhYWo13f00GxSHMKiiaOwowhyNMuSaGxGH2Ms3TiwnPgrOzdNNka6eaHlJNF4IPUudYrNEthUqD1OHfIuabOdlNH3hbNhrskYJmEbzyFUxTJrMXU/s244/1695390036149.png" alt="Right Logo">
+            </div>
         </div>
     </header>
+
+    
     <!-- Main content section -->
     <div class="content">
         <h2>Welcome to our college fashion show!</h2>
@@ -392,7 +66,7 @@ footer {
         <!-- YouTube video section -->
         <div class="video-container">
             <!-- Embed your YouTube video here -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qFzE3ttEBo4" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r949wKY9yHs" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <h3 class="trophy-heading">Image Highlight</h3>
