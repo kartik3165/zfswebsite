@@ -1,0 +1,347 @@
+header {
+    background-color: #FF5A5F;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.logo-left img,
+.logo-right img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    animation: fadeIn 1s ease-in-out forwards;
+    text-align: center; /* Center-align the text */
+}
+
+/* Media query for screens up to 768px wide (typical mobile screens) */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-left img,
+    .logo-right img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Brand logo styles */
+.brand-logo {
+    width: 100px; /* Adjust the logo width as needed */
+    height: 100px;
+    border: 4px solid #FFD166; /* Vibrant yellow border */
+    border-radius: 50%;
+    margin-top: 10px;
+    animation: slideFromLeft 1s ease; /* Slide from left animation */
+}
+/* Main content styles */
+.content {
+    background-color: #EFEFEF; /* Light gray background color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    animation: slideFromRight 1s ease; /* Slide from right animation */
+}
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+/* Call to action button styles */
+.cta-button {
+    background-color: #FF5A5F; /* Vibrant CTA button background color */
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease; /* Smooth button color transition */
+    animation: slideFromRight 1s ease; /* Slide from right animation */
+}
+.cta-button:hover {
+    background-color: #E5484C; /* Darker color on hover */
+    animation: popup 0.3s ease;
+}
+/* Button popup animation */
+@keyframes popup {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Slideshow container styles */
+.slideshow-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    animation: slideFromLeft 1s ease; /* Slide from left animation */
+}
+/* Slides styles */
+.mySlides {
+    display: none;
+    animation: fadeIn 2s ease; /* Fade-in animation for images */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.mySlides img {
+    width: 100%;
+    border-radius: 10px; /* Add rounded corners to images */
+}
+/* Event information paragraph styles */
+.event-info {
+    font-size: 18px;
+    margin-top: 10px;
+}
+/* YouTube video container styles */
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+    overflow: hidden;
+    animation: slideFromLeft 1s ease; /* Slide from left animation */
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Scroll-triggered animation */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+/* Heading for Trophy Wins Till Now */
+.trophy-heading {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: slideFromLeft 1s ease; /* Slide from left animation */
+}
+/* Image and Text Section Styles */
+.image-text-section {
+    background-color: #EFEFEF; /* Light gray background color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-top: 20px; /* Create space from the content above */
+    animation: slideFromRight 1s ease; /* Slide from right animation */
+}
+.image-text-section h3 {
+    color: #333; /* Dark text color */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.image-text-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding: 20px 0;
+    animation: slideFromLeft 1s ease; /* Slide from left animation */
+}
+.image-text-item {
+    text-align: center;
+    margin-right: 20px; /* Space between items */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.image-text-item img {
+    width: 100px; /* Adjust image width as needed */
+    border-radius: 10px;
+}
+/* Fade-in animation on scroll */
+.image-text-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Keyframes for animations */
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* Add this CSS for the costume slideshow */
+.costume-slideshow-container {
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    animation: slideFromRight 1s ease; /* Slide from right animation */
+}
+.costume-slide {
+    display: none;
+}
+.costume-slide img {
+    width: 100%;
+    border-radius: 10px; /* Add rounded corners to images */
+}
+/* Add this CSS for styling the costume controls buttons */
+.costume-controls button {
+    background-color: #FF5A5F; /* Vibrant button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Add spacing between buttons */
+}
+.costume-controls button:hover {
+    background-color: #E5484C; /* Darker color on hover */
+}
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: #fff; /* Text color */
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.developer-info p {
+    margin: 0;
+    font-size: 16px;
+}
+.social-media-links {
+    margin-top: 10px;
+}
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+.social-link:hover {
+    text-decoration: underline;
+}
+/* Add styles for the new section */
+.background-section {
+    background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEju5W_crSRWzwakwEjvo2DYQwWc5P3No6nZ7lytHvt9NYywv_AijHgJwxKYjRbVrzhXJX0Vv2Gho5XJLlQWMcoVQss9t8Ub9O5UVkjB0F3cmWomU8luWSylL0zqRmMfHpgJt6xG6EkoVLiGQ5tgufHQyIKuHeE4TK5HSGOmHAGEtIPIFInV8jhpLq1Xx9wr'); /* Replace 'your-background-image.jpg' with the actual image file path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0; /* Adjust as needed */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Add styles for the centered button */
+.centered-button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add styles for the button animation (you can customize the animation as needed) */
+.animated-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite; /* Example animation, you can customize this */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.image-slideshow-container {
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    animation: slideFromRight 1s ease;
+}
+
+.image-slide {
+    display: none;
+}
+
+.image-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.image-control {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
