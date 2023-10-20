@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeal Fashion Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #F8F8F8; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+</style>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-left">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs7cu3bt-8lFMVllSeFI8CnsGQ3zk-VDMYcfdgixO32c8p9rLZ_h2pVfP6phvw0lt2QKsSYk-34igenJksugSppRvyAoqG5cWh5JoQ9n5UpeZDmtYbbZTQ6oEkaqeqawI7QFXFqY6ilIfUWskmsvjCYraq266cK9jGkQy3iSLaVfk5Y-iuhxEbMEh2-7cH/s1765/1695390101918.png" alt="Left Logo">
+            </div>
+            <h1>Zeal Fashion Club</h1>
+            <div class="logo-right">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHr_1FcekXEKAjr6DvR0J7R8T5brq_dg227_90D37ATqg77O8Pdr5u-iag5YDuhEuMdq1jVvIZZMPDUhYWo13f00GxSHMKiiaOwowhyNMuSaGxGH2Ms3TiwnPgrOzdNNka6eaHlJNF4IPUudYrNEthUqD1OHfIuabOdlNH3hbNhrskYJmEbzyFUxTJrMXU/s244/1695390036149.png" alt="Right Logo">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="year-list">
+            <button class="red-button" onclick="openImagePage23()" >2023</button>
+            <button class="white-button" onclick="openImagePage20()">2020</button>
+            <button class="red-button" onclick="openImagePage19()">2019</button>
+            <!--<button class="white-button" onclick="openImagePage()">2020</button>
+            <button class="red-button" onclick="openImagePage()">2019</button> -->
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold">Website Developer</h4>
+                <p class="mt-2">Kartik Nagare</p>
+                <p class="mt-2">
+                    Follow on Instagram: 
+                    <a href="https://www.instagram.com/kanbs_3165/" target="_blank" class="text-blue-300">@kanbs_3165</a>
+                </p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold">All Rights Reserved</h4>
+                <p class="mt-2">&copy; 2023 zeal fashion club</p>
+            </div>
+            <div class="text-center">
+                <h4 class="text-xl font-semibold">Follow Us</h4>
+                <a href="https://www.instagram.com/zealfashionshow/" target="_blank" class="text-3xl mt-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="mt-4 mx-auto text-left">
+                    <table>
+                        <tr class="align-middle">
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCKPkFYriCkmvj-lhGW7fcz74QkytlLDnul2ijFjkdkBZ2et5d3--YvKs-xGgQ2LZkS8_e6rV8XydrGuKn1-f65Iejkxji98aQPDp57J9_U8cfiRZtVJM6g27SbAZaPPo2WwvTGWH5Ceaa-HYAV8HPkhs8SA8hXhJ6xZh4RK6Fe5YZkymgs9ADi78qCKw8/s512/instagram.png" alt="Image 1" class="w-16 h-16">
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <a href="https://www.instagram.com/zealfashionshow/" class="text-blue-300">Zealfashionshow</a>
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmNyimcdD6gRqkJf1g7XvWGz4YiOxAe_Exk39dyRAj_3N-FFtGK8L2ZaZCPMHn10GGManAQhlkVDL3qU4t4knZwgO9PITZriJ8m6KzGo3DMB5hBJuuTGTgliP9DieXgl3M3hDMgyZPd6hBF7uJzTb-FpUeYl5jF5NUKWDmI8YLtD0ko-IZzmbaaBeJq3a0/s512/youtube.png" alt="Image 1" class="w-16 h-16">
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <a href="https://youtube.com/@zfs2k24?si=9H5uPGppJFX2ig8n" class="text-blue-300">Zealfashionshow</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </footer>  
+<script>
+function openImagePage23() {
+        window.location.href = 'img2k23.html';
+    }
+function openImagePage20() {
+        window.location.href = 'img2k20.html';
+    }
+function openImagePage19() {
+        window.location.href = 'img2k19.html';
+    }
+</script>
+</body>
+</html>

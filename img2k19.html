@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos Gallery</title>
+    
+    <!-- Inline CSS for custom styles -->
+    <style>
+        *{
+            font-family:'Times New Roman', Times, serif;
+        }
+        /* Custom styles for header */
+        .header {
+            background-color: #FF5A5F;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Custom styles for the image grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .image-cell {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .image-cell img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.2s;
+        }
+
+        .image-cell img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Custom styles for the fullscreen image */
+        .fullscreen-image {
+            display: none; /* Initially hide the fullscreen image */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .fullscreen-image img {
+            max-width: 90%;
+            max-height: 90%;
+            cursor: pointer;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="text-3xl font-semibold">Image Gallery 2k19</h1>
+    </header>
+
+    <!-- Image Grid -->
+    <div class="container">
+        <div class="grid">
+            <div class="image-cell">               
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1muPlNCI3-lH58iWyjiu9_eBb0SyNTq-84vJKAQb82974JwzTMLIRnJtv1weepfmLdptYozGesPbpHzcQmeCHKiXEjj3UJqKpJDQhQ3AMsqVi91F8TEKPZ_g-zWBJ-AKcrdi5MARdC-sVuycULpxK5JaYncoHLMblFsP5IZtP4mAWu58UVrv4v3rHBzTb/s1080/1.jpg" alt="Image 1" 
+                onclick="openImage('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1muPlNCI3-lH58iWyjiu9_eBb0SyNTq-84vJKAQb82974JwzTMLIRnJtv1weepfmLdptYozGesPbpHzcQmeCHKiXEjj3UJqKpJDQhQ3AMsqVi91F8TEKPZ_g-zWBJ-AKcrdi5MARdC-sVuycULpxK5JaYncoHLMblFsP5IZtP4mAWu58UVrv4v3rHBzTb/s1080/1.jpg')">
+            </div>
+            <!-- <div class="image-cell">               
+                <img src="just add img link from blogger page" alt="Image number" 
+                onclick="openImage(' just add img link from blogger page')">
+            </div> -->
+            <p>Remaining photography will be upload soon </p>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image -->
+    <div id="fullscreen-modal" class="fullscreen-image">
+        <img src="" alt="Enlarged Image" id="fullscreen-image">
+        <span class="close-button" onclick="closeImage()">&#x2715;</span>
+    </div>
+
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-semibold">Website Developer</h4>
+                <p class="mt-2">Kartik Nagare</p>
+                <p class="mt-2">
+                    Follow on Instagram: 
+                    <a href="https://www.instagram.com/kanbs_3165/" target="_blank" class="text-blue-300">@kanbs_3165</a>
+                </p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold">All Rights Reserved</h4>
+                <p class="mt-2">&copy; 2023 zeal fashion club</p>
+            </div>
+            <div class="text-center">
+                <h4 class="text-xl font-semibold">Follow Us</h4>
+                <a href="https://www.instagram.com/zealfashionshow/" target="_blank" class="text-3xl mt-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <div class="mt-4 mx-auto text-left">
+                    <table>
+                        <tr class="align-middle">
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCKPkFYriCkmvj-lhGW7fcz74QkytlLDnul2ijFjkdkBZ2et5d3--YvKs-xGgQ2LZkS8_e6rV8XydrGuKn1-f65Iejkxji98aQPDp57J9_U8cfiRZtVJM6g27SbAZaPPo2WwvTGWH5Ceaa-HYAV8HPkhs8SA8hXhJ6xZh4RK6Fe5YZkymgs9ADi78qCKw8/s512/instagram.png" alt="Image 1" class="w-16 h-16">
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <a href="https://www.instagram.com/zealfashionshow/" class="text-blue-300">Zealfashionshow</a>
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmNyimcdD6gRqkJf1g7XvWGz4YiOxAe_Exk39dyRAj_3N-FFtGK8L2ZaZCPMHn10GGManAQhlkVDL3qU4t4knZwgO9PITZriJ8m6KzGo3DMB5hBJuuTGTgliP9DieXgl3M3hDMgyZPd6hBF7uJzTb-FpUeYl5jF5NUKWDmI8YLtD0ko-IZzmbaaBeJq3a0/s512/youtube.png" alt="Image 1" class="w-16 h-16">
+                            </td>
+                            <td class="text-center"> <!-- Add text-center class here -->
+                                <a href="https://youtube.com/@zfs2k24?si=9H5uPGppJFX2ig8n" class="text-blue-300">Zealfashionshow</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </footer>   
+
+    <!-- JavaScript -->
+    <script>
+         function openImage(imageUrl) {
+        const fullscreenModal = document.getElementById("fullscreen-modal");
+        const fullscreenImage = document.getElementById("fullscreen-image");
+        
+        if (!fullscreenModal.style.display || fullscreenModal.style.display === "none") {
+            // Only open in fullscreen if it's not already open
+            fullscreenImage.src = imageUrl;
+            fullscreenModal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent scrolling while modal is open
+        }
+    }
+
+    function closeImage() {
+        const fullscreenModal = document.getElementById("fullscreen-modal");
+        fullscreenModal.style.display = "none";
+        document.body.style.overflow = "auto"; // Restore scrolling
+    }
+
+    // Add a popstate event listener to handle back button press
+    window.addEventListener("popstate", function(event) {
+        // Check if the history state is null (indicating back button press)
+        if (event.state === null) {
+            // Redirect to index.html
+            window.location.href = "index.html";
+        }
+    });
+        
+    </script>
+</body>
+</html>
